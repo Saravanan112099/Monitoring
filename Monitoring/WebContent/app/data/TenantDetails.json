@@ -1,0 +1,284 @@
+{
+    "details": [
+    {
+        "tenantName": "dominos_tenant",
+        "totalVehicles": 5,
+        "moving": 1,
+        "notMoving": 4,
+        "nonReporting2": 1,
+        "nonReporting24": 0,
+        "lastFeedTime": "2017-01-09 16:31:42",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "techmart_tenant",
+        "totalVehicles": 5,
+        "moving": 1,
+        "notMoving": 3,
+        "nonReporting2": 0,
+        "nonReporting24": 1,
+        "lastFeedTime": "2017-01-09 16:31:19",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "globalcarrental_tenant",
+        "totalVehicles": 54,
+        "moving": 11,
+        "notMoving": 22,
+        "nonReporting2": 1,
+        "nonReporting24": 21,
+        "lastFeedTime": "2017-01-09 16:33:12",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "vlc_tenant",
+        "totalVehicles": 559,
+        "moving": 83,
+        "notMoving": 425,
+        "nonReporting2": 11,
+        "nonReporting24": 51,
+        "lastFeedTime": "2017-01-09 16:33:08",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "eurocarrental_tenant",
+        "totalVehicles": 201,
+        "moving": 39,
+        "notMoving": 151,
+        "nonReporting2": 10,
+        "nonReporting24": 11,
+        "lastFeedTime": "2017-01-09 16:33:09",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "omanair_tenant",
+        "totalVehicles": 24,
+        "moving": 3,
+        "notMoving": 20,
+        "nonReporting2": 0,
+        "nonReporting24": 1,
+        "lastFeedTime": "2017-01-09 16:32:10",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "omzest_tenant",
+        "totalVehicles": 4,
+        "moving": 0,
+        "notMoving": 4,
+        "nonReporting2": 0,
+        "nonReporting24": 0,
+        "lastFeedTime": "2017-01-09 16:30:19",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "mhdgases_tenant",
+        "totalVehicles": 63,
+        "moving": 13,
+        "notMoving": 42,
+        "nonReporting2": 1,
+        "nonReporting24": 8,
+        "lastFeedTime": "2017-01-09 16:32:32",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "national_tenant",
+        "totalVehicles": 6,
+        "moving": 1,
+        "notMoving": 5,
+        "nonReporting2": 4,
+        "nonReporting24": 0,
+        "lastFeedTime": "2017-01-09 16:33:13",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "national_tenant",
+        "totalVehicles": 94,
+        "moving": 33,
+        "notMoving": 61,
+        "nonReporting2": 4,
+        "nonReporting24": 0,
+        "lastFeedTime": "2017-01-09 16:33:13",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "asaasom_tenant",
+        "totalVehicles": 0,
+        "moving": 0,
+        "notMoving": 0,
+        "nonReporting2": 0,
+        "nonReporting24": 0,
+        "lastFeedTime": "000-00-00 00:00:00",
+        "reportExecutioStatus": false
+    },
+    {
+        "tenantName": "bcc_om_tenant",
+        "totalVehicles": 53,
+        "moving": 11,
+        "notMoving": 34,
+        "nonReporting2": 3,
+        "nonReporting24": 8,
+        "lastFeedTime": "2017-01-09 16:33:08",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "marsllc_tenant",
+        "totalVehicles": 42,
+        "moving": 10,
+        "notMoving": 24,
+        "nonReporting2": 2,
+        "nonReporting24": 8,
+        "lastFeedTime": "2017-01-09 16:33:11",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "krshipping_tenant",
+        "totalVehicles": 16,
+        "moving": 1,
+        "notMoving": 13,
+        "nonReporting2": 0,
+        "nonReporting24": 2,
+        "lastFeedTime": "2017-01-09 16:28:48",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "prestige_tenant",
+        "totalVehicles": 7,
+        "moving": 3,
+        "notMoving": 4,
+        "nonReporting2": 0,
+        "nonReporting24": 0,
+        "lastFeedTime": "2017-01-09 16:30:47",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "budgetcar_tenant",
+        "totalVehicles": 1017,
+        "moving": 125,
+        "notMoving": 806,
+        "nonReporting2": 45,
+        "nonReporting24": 86,
+        "lastFeedTime": "2017-01-09 16:33:19",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "autorentoman_tenant",
+        "totalVehicles": 0,
+        "moving": 0,
+        "notMoving": 0,
+        "nonReporting2": 0,
+        "nonReporting24": 0,
+        "lastFeedTime": "000-00-00 00:00:00",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "epc_tenant",
+        "totalVehicles": 5,
+        "moving": 0,
+        "notMoving": 3,
+        "nonReporting2": 0,
+        "nonReporting24": 2,
+        "lastFeedTime": "2017-01-09 16:32:11",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "bec_tenant",
+        "totalVehicles": 62,
+        "moving": 10,
+        "notMoving": 36,
+        "nonReporting2": 0,
+        "nonReporting24": 16,
+        "lastFeedTime": "2017-01-09 16:33:09",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "intaj_tenant",
+        "totalVehicles": 10,
+        "moving": 2,
+        "notMoving": 8,
+        "nonReporting2": 2,
+        "nonReporting24": 0,
+        "lastFeedTime": "2017-01-09 16:32:51",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "xpress_tenant",
+        "totalVehicles": 0,
+        "moving": 0,
+        "notMoving": 0,
+        "nonReporting2": 0,
+        "nonReporting24": 0,
+        "lastFeedTime": "000-00-00 00:00:00",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "infiniti_tenant",
+        "totalVehicles": 0,
+        "moving": 0,
+        "notMoving": 0,
+        "nonReporting2": 1,
+        "nonReporting24": 0,
+        "lastFeedTime": "2017-01-09 16:00:03",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "dominos_tenant",
+        "totalVehicles": 5,
+        "moving": 1,
+        "notMoving": 4,
+        "nonReporting2": 1,
+        "nonReporting24": 0,
+        "lastFeedTime": "2017-01-09 16:31:42",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "techmart_tenant",
+        "totalVehicles": 5,
+        "moving": 1,
+        "notMoving": 3,
+        "nonReporting2": 0,
+        "nonReporting24": 1,
+        "lastFeedTime": "2017-01-09 16:31:19",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "globalcarrental_tenant",
+        "totalVehicles": 54,
+        "moving": 11,
+        "notMoving": 22,
+        "nonReporting2": 1,
+        "nonReporting24": 21,
+        "lastFeedTime": "2017-01-09 16:33:12",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "dominos_tenant",
+        "totalVehicles": 5,
+        "moving": 1,
+        "notMoving": 4,
+        "nonReporting2": 1,
+        "nonReporting24": 0,
+        "lastFeedTime": "2017-01-09 16:31:42",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "techmart_tenant",
+        "totalVehicles": 5,
+        "moving": 1,
+        "notMoving": 3,
+        "nonReporting2": 0,
+        "nonReporting24": 1,
+        "lastFeedTime": "2017-01-09 16:31:19",
+        "reportExecutioStatus": true
+    },
+    {
+        "tenantName": "globalcarrental_tenant",
+        "totalVehicles": 54,
+        "moving": 11,
+        "notMoving": 22,
+        "nonReporting2": 1,
+        "nonReporting24": 21,
+        "lastFeedTime": "2017-01-09 16:33:12",
+        "reportExecutioStatus": true
+    }
+]
+}

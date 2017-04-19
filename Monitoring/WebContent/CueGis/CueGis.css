@@ -1,0 +1,264 @@
+.menu {
+	background:WHITE;
+	height:auto;
+	width:44px;
+	padding-left:0px;
+	padding-top:2px;
+	padding-right:4px;
+	-moz-border-radius: 8px;	
+	-webkit-border-radius: 8px;
+	border-radius: 8px; 
+	border: 2px solid;
+	border-color:#58ACFA;
+}
+.menuTitle {
+	font-size : 12px !important;
+	padding: 2px;
+	font-family: lucida console;
+	text-align: center;
+}
+.menuItem{
+	background:WHITE;
+	padding : 5px;
+	height:35px;
+	width:30px;
+	
+}
+
+.menuItem:hover{	
+	border: 2px solid;
+	height:35px;
+	width:30px;
+	border-color: #01A9DB;
+	border-radius : 5px;
+}
+
+.drawToolWindow {
+	background: transperant none repeat scroll 0 0;
+    border-radius: 0;
+    height: 20px;
+    padding: 3px;
+    position: absolute;
+    width: 137px;
+}
+
+.drawToolTxtBox {
+	width : 133px;
+}
+
+
+#verticalToolBar {
+	background:#A9E2F3;
+	height:480px;
+	width:auto;	
+	padding: 10px 15px 10px 3px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px; 
+	border: 2px solid;
+	border-color:#58ACFA;
+	z-index: 100000000 !important;
+	-moz-column-fill: auto;
+    -moz-columns: 3 auto;
+	-webkit-column-fill: auto;
+	-webkit-columns : 3 auto;
+	columns : 3 auto;
+	column-fill: auto;
+	max-width: 155px;
+    min-height: 480px; 
+    filter:alpha(opacity=85);
+    opacity:.85;
+    position: absolute;
+}
+
+#verticalToolBar:after {
+	
+}
+
+<style type="text/css">
+
+  .clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    }
+
+.clearfix {display: inline-block;}  /* for IE/Mac */
+
+</style><!-- main stylesheet ends, CC with new stylesheet below... -->
+
+<!--[if IE]>
+<style type="text/css">
+  .clearfix {
+    zoom: 1;     /* triggers hasLayout */
+    display: block;     /* resets display for IE/Win */
+    }  /* Only IE can see inside the conditional comment
+    and read this CSS rule. Don't ever use a normal HTML
+    comment inside the CC or it will close prematurely. */
+</style>
+<![endif]-->
+
+.ol-overlaycontainer-stopevent {
+    z-index : 1000000 !important;
+}
+.ol-popup {
+position: absolute;
+background-color: white;
+-webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+padding: 15px;
+border-radius: 10px;
+border: 1px solid #cccccc;
+bottom: 12px;
+left: -50px;
+}
+.ol-popup:after, .ol-popup:before {
+top: 100%;
+border: solid transparent;
+content: " ";
+height: 0;
+width: 0;
+position: absolute;
+pointer-events: none;
+}
+.ol-popup:after {
+border-top-color: white;
+border-width: 10px;
+left: 48px;
+margin-left: -10px;
+}
+.ol-popup:before {
+border-top-color: #cccccc;
+border-width: 11px;
+left: 48px;
+margin-left: -11px;
+}
+.ol-popup-closer {
+text-decoration: none;
+position: absolute;
+top: 2px;
+right: 8px;
+}
+.ol-popup-closer:after {
+content: "X";
+}
+.tooltip {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  color: white;
+  padding: 4px 8px;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+.tooltip-measure {
+  opacity: 1;
+  font-weight: bold;
+}
+.tooltip-static {
+  background-color: #ffcc33;
+  color: black;
+  border: 1px solid white;
+}
+.tooltip-measure:before,
+.tooltip-static:before {
+  border-top: 6px solid rgba(0, 0, 0, 0.5);
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  margin-left: -7px;
+  left: 50%;
+}
+.tooltip-static:before {
+  border-top-color: #ffcc33;
+}
+
+.markerHighlight {
+    -moz-user-select: none;
+    border: 3px dashed BLACK;
+    border-radius: 32px;
+    bottom: -13px;
+    height: 50px;
+    left: -20px;
+    opacity: 0.9;
+    position: absolute;
+    width: 50px;
+}
+.nonSelection {
+    -moz-user-select: none;
+}
+.circleOut {
+	-moz-user-select: none;
+    height: 1px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 0;
+    border: 1px solid transparent;
+    width: 0em;
+    height: 0;
+    top: -49px;
+    left: -30px;
+}
+.circleOut::before {
+    animation-delay: -1s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-name: fadeOut;
+    animation-timing-function: ease-in-out;
+    border: 0.5em solid #fa8258;
+    border-radius: 100%;
+    box-sizing: border-box;
+    content: "";
+    display: block;
+    height: 4em;
+    left: -1em;
+    margin: 0 auto;
+    position: relative;
+    top: -0.8em;
+    transform-origin: center center 0;
+    width: 4em;
+}
+.circleOut::after {
+    animation-delay: -0.5s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-name: fadeOut;
+    animation-timing-function: ease;
+    border: 0.2em solid #fa8258;
+    border-radius: 100%;
+    box-sizing: border-box;
+    content: "";
+    display: block;
+    height: 4em;
+    left: -1em;
+    margin: 0 auto;
+    position: absolute;
+    top: -0.8em;
+    transform-origin: center center 0;
+    width: 4em;
+}
+@keyframes fadeOut {
+0% {
+    transform: scale(0);
+}
+50% {
+    opacity: 1;
+}
+100% {
+    opacity: 0;
+    transform: scale(1);
+}
+}
+.rotate-north {
+  top: 5em;
+  right: 3em;
+ 
+}
+.ol-scale-line{
+	bottom:38px;
+}

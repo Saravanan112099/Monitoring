@@ -1,0 +1,27 @@
+{
+    "sysDetails" : [
+            {
+                "name" : "Disk %",
+                "value" : "91.75676",
+                "details" : {
+                    "totalDiskSpace" : "148G",
+                    "availableDiskSpace" : "138G",
+                    "usedDiskSpace" : "70G"
+                }
+            },
+            {
+                "name" : "Mem %",
+                "value" : "60.5319",
+                "details" : {
+                    "totalMemory" : "16G",
+                    "usedMemory" : "10",
+                    "cacheMemory" : "8",
+                    "bufferMemory" : "2"
+                }
+            },
+            {
+                "name" : "Cpu %",
+                "value" : "10"
+            }
+    ]
+}

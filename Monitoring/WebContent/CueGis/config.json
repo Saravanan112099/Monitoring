@@ -1,0 +1,151 @@
+if(!CueGis) {
+	CueGis = {};
+}
+CueGis.gisEngineUrl = "/CuecentGISRestService/GIS";
+CueGis_tenantID = "cuecent_tenant";
+CueGis.isProduction = true;
+CueGis.dragListener = false;
+CueGis._configurations = {
+	"1" : {		
+		"map" : "osm",
+		"mapSrc" : "",
+		"gisEngine" : "/CuecentGISRestService/GIS",
+		"geocoding" : {
+			"module" : "Nominatim",
+			"url" : "http://nominatim.openstreetmap.org/search/",
+			"reverseGeocodeUrl":"http://nominatim.openstreetmap.org/reverse"
+		},
+		"routing" : {
+			"module" : "OSRM",
+			"url" : "http://router.project-osrm.org/viaroute",
+			"matchUrl" : "http://router.project-osrm.org/match"
+		}
+	},"2" : {		
+		"map" : "osm",
+		"mapSrc" : "",
+		"gisEngine" : "/CuecentGISRestService/GIS",
+		"geocoding" : {
+			"module" : "Nominatim",
+			"url" : "https://nominatim.openstreetmap.org/search/",
+			"reverseGeocodeUrl":"https://nominatim.openstreetmap.org/reverse"
+		},
+		"routing" : {
+			"module" : "OSRM",
+			"url" : "http://router.project-osrm.org/viaroute"
+			
+		}
+	},"3" : {		
+		"map" : "osm",
+		"mapSrc" : "",
+		"gisEngine" : "/CuecentGISRestService/GIS",
+		"geocoding" : {
+			"module" : "Nominatim",
+			"url" : "https://nominatim.openstreetmap.org/search/",
+			"reverseGeocodeUrl":"https://nominatim.openstreetmap.org/reverse"
+		},
+		"routing" : {
+			"module" : "OSRM",
+			"url" : "http://router.project-osrm.org/viaroute"
+			
+		}
+	},"4" : {		
+		"map" : "osm",
+		"mapSrc" : "",
+		"gisEngine" : "/CuecentGISRestService/GIS",
+		"geocoding" : {
+			"module" : "Nominatim",
+			"url" : "https://nominatim.openstreetmap.org/search/",
+			"reverseGeocodeUrl":"https://nominatim.openstreetmap.org/reverse"
+		},
+		"routing" : {
+			"module" : "OSRM",
+			"url" : "http://router.project-osrm.org/viaroute"
+			
+		}
+	},"5" : {		
+		"map" : "osm",
+		"mapSrc" : "",
+		"gisEngine" : "/CuecentGISRestService/GIS",
+		"geocoding" : {
+			"module" : "Nominatim",
+			"url" : "https://nominatim.openstreetmap.org/search/",
+			"reverseGeocodeUrl":"https://nominatim.openstreetmap.org/reverse"
+		},
+		"routing" : {
+			"module" : "OSRM",
+			"url" : "http://router.project-osrm.org/viaroute"
+			
+		}
+	},"6" : {		
+		"map" : "osm",
+		"mapSrc" : "",
+		"gisEngine" : "/CuecentGISRestService/GIS",
+		"geocoding" : {
+			"module" : "Nominatim",
+			"url" : "https://nominatim.openstreetmap.org/search/",
+			"reverseGeocodeUrl":"https://nominatim.openstreetmap.org/reverse"
+		},
+		"routing" : {
+			"module" : "OSRM",
+			"url" : "http://router.project-osrm.org/viaroute"
+			
+		}
+	},"7" : {		
+		"map" : "osm",
+		"mapSrc" : "",
+		"gisEngine" : "/CuecentGISRestService/GIS",
+		"geocoding" : {
+			"module" : "Nominatim",
+			"url" : "https://nominatim.openstreetmap.org/search/",
+			"reverseGeocodeUrl":"https://nominatim.openstreetmap.org/reverse"
+		},
+		"routing" : {
+			"module" : "OSRM",
+			"url" : "http://router.project-osrm.org/viaroute"
+			
+		}
+	},"8" : {		
+		"map" : "osm",
+		"mapSrc" : "",
+		"gisEngine" : "/CuecentGISRestService/GIS",
+		"geocoding" : {
+			"module" : "Nominatim",
+			"url" : "https://nominatim.openstreetmap.org/search/",
+			"reverseGeocodeUrl":"https://nominatim.openstreetmap.org/reverse"
+		},
+		"routing" : {
+			"module" : "OSRM",
+			"url" : "http://router.project-osrm.org/viaroute"
+			
+		}
+	},"9" : {		
+		"map" : "osm",
+		"mapSrc" : "",
+		"gisEngine" : "/CuecentGISRestService/GIS",
+		"geocoding" : {
+			"module" : "Nominatim",
+			"url" : "https://nominatim.openstreetmap.org/search/",
+			"reverseGeocodeUrl":"https://nominatim.openstreetmap.org/reverse"
+		},
+		"routing" : {
+			"module" : "OSRM",
+			"url" : "http://router.project-osrm.org/viaroute"
+			
+		}
+	},"10" : {		
+		"map" : "osm",
+		"mapSrc" : "",
+		"gisEngine" : "/CuecentGISRestService/GIS",
+		"geocoding" : {
+			"module" : "Nominatim",
+			"url" : "https://nominatim.openstreetmap.org/search/",
+			"reverseGeocodeUrl":"https://nominatim.openstreetmap.org/reverse"
+		},
+		"routing" : {
+			"module" : "OSRM",
+			"url" : "http://router.project-osrm.org/viaroute"
+			
+		}
+	}
+}
+CueGisInit(CueGis);

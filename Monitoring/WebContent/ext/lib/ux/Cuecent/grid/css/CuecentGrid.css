@@ -1,0 +1,118 @@
+.x-livesearch-match {
+    font-weight: bold;
+	background-color: yellow;
+}
+.cuecentGrid-addIcon {
+	background: url(images/add.png) no-repeat;
+}
+.cuecentGrid-deleteIcon {
+	background: url(images/delete.png) no-repeat;
+}
+.cuecentGrid-saveIcon {
+	background: url(images/save.png) no-repeat;
+}
+.cuecentGrid-pdfIcon {
+	background: url(images/pdf_logo.png) no-repeat;
+}
+.cuecentGrid-xlsIcon {
+	background: url(images/excel_logo.png) no-repeat;
+	width:25px;
+	height:25px;
+	padding:0;
+	margin:0;
+}
+
+
+.cuecentGrid-upIcon {
+	background: url(../../../../../ext/gpl/ivms_theme/images/grid/Grid_navigation.png) no-repeat -5px -5px;
+}
+.cuecentGrid-downIcon {
+	background: url(../../../../../ext/gpl/ivms_theme/images/grid/Grid_navigation.png) no-repeat -5px -32px;
+}
+
+
+.button_section_container{
+	padding:5px 5px 5px 5px;
+	margin:5px 0 0 0;
+	height:36px !important;
+	vertical-align:top;
+	text-align:right;
+	border-top:1px solid #dcdcdc !important;
+}
+
+
+
+.Gridbtn {
+	margin:0;
+	padding: 0;
+	float:right;
+	text-align:right;
+	
+}
+
+
+.Gridbtn.x-btn-default-toolbar-small {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    padding: 0;
+    border-width: 0px;
+    border-style: solid;
+    background-color: #35b483;
+	line-height:25px;
+	-webkit-box-shadow: inset 0 -1px #c1c1c1;
+	-moz-box-shadow: inset 0 -1px #c1c1c1;
+	box-shadow: inset 0 -1px #c1c1c1;
+}
+.Gridbtn.x-btn-focus.x-btn-default-toolbar-small {
+    background-image: none;
+    background-color: #334554
+}
+.Gridbtn.x-btn-over.x-btn-default-toolbar-small {
+    border-color: #334554;
+	border-width: 0px;
+    background-image: none;
+    background-color: #334554;
+}
+.Gridbtn.x-btn.x-btn-menu-active.x-btn-default-toolbar-small,
+.Gridbtn.x-btn.x-btn-pressed.x-btn-default-toolbar-small {
+    background-image: none;
+    background-color: #334554;
+}
+.Gridbtn.x-btn-focus.x-btn-over.x-btn-default-toolbar-small {
+	-webkit-box-shadow: inset 0 -1px #c1c1c1;
+	-moz-box-shadow: inset 0 -1px #c1c1c1;
+	box-shadow: inset 0 -1px #c1c1c1;
+}
+.Gridbtn .x-btn-inner{
+	text-align: center;
+	color: #ffffff;
+	font: 300 12px helvetica,arial,verdana,sans-serif;
+	padding:0px 8px;
+	line-height: 24px;
+}
+.gridtbar_icon_right{
+	width:22px;
+	height:22px;
+	padding:0;
+	margin:0px 8px 0 0 !important;
+	cursor:pointer;	
+	float: right;	
+}
+
+
+.c-generalfont {
+	font: 300 12px helvetica, arial, verdana, sans-serif;
+	text-align: right;
+	color:#67798d;
+}
+
+.grid_logo_splitter{
+	
+	height:22px !important;
+	background: url("images/logo_splitter.png") no-repeat center center;
+	margin:0!important;
+	float: left;
+}
