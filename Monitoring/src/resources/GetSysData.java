@@ -100,8 +100,8 @@ public class GetSysData {
 
 	public static void main(String[] args) throws InterruptedException, IOException, CustomException {
 		// TODO Auto-generated method stub
-            GetSysData gsd = new GetSysData();
-            System.out.println(gsd.commandOut());
+//            GetSysData gsd = new GetSysData();
+//            System.out.println(gsd.commandOut());
 //            uae_url = http\://uae.cuetrans.com/Monitoring/report?username\=ivms&password\=ivms
 //            ksa_url = http\://ksa.cuetrans.com/Monitoring/report?username\=ivms&password\=ivms
 //            System.out.println(gsd.temp("http://om-vlc.cuetrans.com/Monitoring/report?username=ivms&password=ivms"));

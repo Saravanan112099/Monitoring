@@ -120,7 +120,7 @@ public class GetDefectServlet extends HttpServlet {
 			JsonObject updatedValues = (new JsonParser()).parse(request.getParameter("updatedValues")).getAsJsonObject();
 //			JsonObject json_assetsStatus = (new JsonParser()).parse(assetsStatus).getAsJsonObject();
 //			System.out.println("Status : "+updatedValues.get("status").toString());
-
+			System.out.println("Updated Columns : "+request.getParameter("updatedColumns").replace("[", "(").replace("]", ")").replace("\"", ""));
 //			System.out.println("Status : "+updatedValues.get("status"));
 //			System.out.println("Deliver_dt : "+updatedValues.get("deliver_dt"));
 //			System.out.println("Comments : "+updatedValues.get("comments"));
@@ -133,9 +133,9 @@ public class GetDefectServlet extends HttpServlet {
 				String comments = request.getParameter("comments");
 				String subflow = request.getParameter("subflow");
 				String queryOut = null;
+				String updatedColumns = request.getParameter("updatedColumns").replace("[", "(").replace("]", ")").replace("\"", "");
 				System.out.println("Sub Flow : "+subflow);
 				if(subflow != null){
-					
 	//				System.out.println("Comments : "+comments);
 	//				System.out.println(comments.trim().equals(""));
 	//				qa.updateDefect(colName, defectId, newValue);
@@ -143,7 +143,7 @@ public class GetDefectServlet extends HttpServlet {
 					if(subflow.equals("WithoutCommet")){
 //						System.out.println(updatedValues);
 //						System.out.println(updatedValues.get("assigned_to").isJsonNull());
-						qa.update(defectId, updatedValues);
+						qa.update(defectId, updatedValues, updatedColumns);
 						try{
 							queryOut = qa.getDefectDetails(defectId);
 						}catch(Exception ex){
@@ -152,7 +152,7 @@ public class GetDefectServlet extends HttpServlet {
 						out.print(queryOut);
 						out.close();
 					}else if(subflow.equals("WithCommet")){
-						qa.update(defectId, updatedValues);
+						qa.update(defectId, updatedValues, updatedColumns);
 						if(!comments.trim().equals("")){
 							qa.insertComments(defectId, sentBy, comments);
 						}

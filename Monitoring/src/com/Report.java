@@ -82,8 +82,8 @@ public class Report extends HttpServlet {
 		int passIndex = passlist.indexOf(password);
 		System.out.println(username);
 		System.out.println(password);
-		System.out.println(unIndex);
-		System.out.println(passIndex);
+//		System.out.println(unIndex);
+//		System.out.println(passIndex);
         
 		response.setContentType("text/html");
                 response.setHeader("Cache-control", "no-cache, no-store");

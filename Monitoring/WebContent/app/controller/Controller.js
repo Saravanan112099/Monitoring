@@ -326,6 +326,14 @@ Ext.define('app.controller.Controller', {
 		//		console.log('Column Name : ' + colName);
 //		console.log('Record Id : ' + recordId);
 		//		console.log('New Value : ' + newValue);
+		var updatedColumns= [];
+		if(beforeEditValues.status != editValues.status){
+			updatedColumns.push('Status')
+		}
+		if(beforeEditValues.deliver_dt != editValues.deliver_dt){
+			updatedColumns.push('DeliverDate')
+		}
+		
 		var commStat  = null;
 		var mask = new Ext.LoadMask(Ext.getBody(), { msg: "Please wait..." });
 				mask.show();
@@ -364,6 +372,7 @@ Ext.define('app.controller.Controller', {
 						params: {
 							workFlowName: 'updateDefect',
 							updatedValues: Ext.encode(editValues),
+							updatedColumns : Ext.encode(updatedColumns),
 							comments: comm,
 							subflow : commStat,
 							defectId: recordId,
@@ -375,7 +384,9 @@ Ext.define('app.controller.Controller', {
 							mask.hide();
 							response = Ext.decode(response.responseText);
 							app.util.Utilities.currentStatus = editValues.status
-							app.util.Utilities.currentDeliverDate = editValues.deliver_dt					
+							app.util.Utilities.currentDeliverDate = editValues.deliver_dt	
+							beforeEditValues.status = editValues.status
+			        		beforeEditValues.deliver_dt = editValues.deliver_dt;
 							Ext.getCmp('dtlComments').reset();
 							var grid = Ext.getCmp('defect_grid');
 							var b = grid.getStore().getRange();
@@ -431,6 +442,22 @@ Ext.define('app.controller.Controller', {
 	//		console.log('Column Name : ' + colName);
 	//		console.log('Record Id : ' + recordId);
 	//		console.log('New Value : ' + newValue);
+		var updatedColumns= [];
+		if(beforeEditValues.status != editValues.status){
+			updatedColumns.push('Status')
+		}
+		if(beforeEditValues.priority != editValues.priority){
+			updatedColumns.push('Priority')
+		}
+		if(beforeEditValues.deliver_dt != editValues.deliver_dt){
+			updatedColumns.push('DeliverDate')
+		}
+		if(beforeEditValues.category != editValues.category){
+			updatedColumns.push('Category')
+		}
+		if(beforeEditValues.assigned_to != editValues.assigned_to){
+			updatedColumns.push('AssignedTo')
+		}
 		var mask = new Ext.LoadMask(Ext.getBody(), { msg: "Please wait..." });
 		mask.show();
 		Ext.Ajax.request({
@@ -439,6 +466,7 @@ Ext.define('app.controller.Controller', {
 			params: {
 				workFlowName: 'updateDefect',
 				updatedValues: Ext.encode(editValues),
+				updatedColumns : Ext.encode(updatedColumns),
 				subflow : 'WithoutCommet',
 				defectId: recordId,
 				sendBy: USERNAME,
@@ -469,7 +497,7 @@ Ext.define('app.controller.Controller', {
 				mask.hide();
 				Ext.MessageBox.alert('Error', 'Error in Fetching Data From Server');
 			}
-		});		
+		});
 	},
 
 	getComboDetails: function (formDialog) {

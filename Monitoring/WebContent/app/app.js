@@ -7,6 +7,13 @@ var editValues = {
 		priority : '',
 		category : ''
 }
+var beforeEditValues = {
+		status : '',
+		deliver_dt : '',
+		assigned_to : '',
+		priority : '',
+		category : ''
+}
 //window.onunload = function (e) {
 //	var form = new Ext.FormPanel({
 //	    formBind: true,

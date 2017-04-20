@@ -246,8 +246,8 @@ public class QueryExecuter {
         Statement smt = null;
         PreparedStatement pstmt = null;
 //        PreparedStatement ps = null;
-        String[] returnId = {"defect_id"};
-
+        String[] returnId = {"defect_id","module","component","status","user_nm","tenant_nm","created_dt","deliver_dt","priority","category","assigned_to","subject","description"};
+        String[] records = new String[returnId.length];
 //        String userId = null;
         String userName = null;
 //        String tenantId = null;
@@ -267,24 +267,6 @@ public class QueryExecuter {
             defectComponent = form_fields.get("defectComponent");
             defectSubject = form_fields.get("defectSubject");
             defectDescription = form_fields.get("defectDescription");
-
-//            System.out.println("Subject");
-//            System.out.println("--------------------");
-//            System.out.println(defectSubject);
-//            System.out.println("--------------------");
-//            System.out.println();
-//            System.out.println("Description");
-//            System.out.println("--------------------");
-//            System.out.println(defectDescription);
-//            System.out.println("--------------------");
-//            System.out.println(userName);
-//            System.out.println(tenantId);
-//            System.out.println(tenantName);
-//            System.out.println(defectModule);
-//            System.out.println(defectComponent);
-//            System.out.println(defectSubject);
-//            System.out.println(defectDescription);
-
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -321,8 +303,23 @@ public class QueryExecuter {
             }
             try (ResultSet rs = pstmt.getGeneratedKeys()) {
                 if (rs.next()) {
+//                	System.out.println("----------------------");
+                	for(int i=0;i<records.length;i++){
+                		records[i] = rs.getString(i+1);
+//                		System.out.println(records[i]);
+                	}
+//                	System.out.println("----------------------");
+                	Utils.sendMail("saravanan.p@bahwancybertek.com",""+records[5]+" - New Ticket Added by "+records[4]+"", records,"");
+//                	Utils.sendMail("kotteeswaran.m@bahwancybertek.com","New Ticket Added", records);
                     recordId = rs.getString(1);
-                    System.out.println(recordId);
+//                    System.out.println("Ticket Id :  "+recordId);
+//                    System.out.println("Window Name :  "+rs.getString(2));
+//                    System.out.println("Module Name :  "+rs.getString(3));
+//                    System.out.println("Subject :  "+rs.getString(4));
+//                    System.out.println("Description :  "+rs.getString(5));
+//                    System.out.println("Submitted By :  "+rs.getString(6));
+//                    System.out.println("Submitted Date :  " +Utils.convertTime(rs.getString(7)));
+//                    System.out.println("Tenant Name :  "+rs.getString(8));
                 }
                 rs.close();
             } finally {
@@ -519,9 +516,32 @@ public class QueryExecuter {
                         dbOut = rs.getObject(1).toString();
                     }
                     rs.close();
-                    pstmt.close();
                 } catch (Exception e) {
                     e.printStackTrace();
+                }finally{
+                	pstmt.close();
+                }
+                try {
+                	qry = "select defect_id,module,component,status,user_nm,tenant_nm,created_dt,deliver_dt,priority,category,assigned_to,subject,description from ms_defect where defect_id= ?";
+                    pstmt = conn.prepareStatement(qry);
+                    pstmt.setInt(1, Integer.parseInt(defectId));
+                    ResultSet rs = pstmt.executeQuery();
+                    String[] records = new String[13];
+//                    System.out.println("-------------------------------");
+                    if(rs.next()){
+                    	for(int i =0 ;i<records.length;i++) {
+                        records[i] = rs.getString(i+1);
+//                        System.out.println(rs.getString(i+1));
+//                            dbOut = rs.getObject(1).toString();
+                        }
+                    	Utils.sendMail("saravanan.p@bahwancybertek.com","Commets Added to the Ticket "+defectId+"", records,comments);
+                    }                    
+//                    System.out.println("-------------------------------");
+                    rs.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }finally{
+                	pstmt.close();
                 }
             }
             System.out.println("Comments inserted into the table...");
@@ -570,7 +590,7 @@ public class QueryExecuter {
         return dbOut;
     }
 
-	public void update(String defectId,JsonObject updatedValues) throws SQLException {
+	public void update(String defectId,JsonObject updatedValues,String updatedColumns) throws SQLException {
     	Connection conn = null;
         Statement smt = null;
         PreparedStatement pstmt = null;
@@ -585,6 +605,8 @@ public class QueryExecuter {
             String category = ((updatedValues.get("category").isJsonNull()) || updatedValues.get("category").getAsString().equals("")) ? "" : updatedValues.get("category").getAsString();
             String deliver_dt = ((updatedValues.get("deliver_dt").isJsonNull()) || updatedValues.get("deliver_dt").getAsString().equals("")) ? null : updatedValues.get("deliver_dt").getAsString();
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            String[] returnId = {"defect_id","module","component","status","user_nm","tenant_nm","created_dt","deliver_dt","priority","category","assigned_to","subject","description"};
+            String[] records = new String[returnId.length];
             
             String sql = "";
 //            String sql = "UPDATE ms_defect SET "+colName+" = '"+newValue+"' , modified_dt = "+System.currentTimeMillis()/1000+" WHERE defect_id = "+defectId+"";
@@ -603,7 +625,7 @@ public class QueryExecuter {
 //				System.out.println("Deliver date Modified");
 //			}
             try {
-            	pstmt = conn.prepareStatement(sql);
+            	pstmt = conn.prepareStatement(sql,returnId);
             	pstmt.setString(1, status);
             	pstmt.setString(2, assigned_to);
             	if(priority == null){
@@ -620,7 +642,20 @@ public class QueryExecuter {
             	}
             	
             	pstmt.setInt(6, Integer.parseInt(defectId));
-            	pstmt.execute();
+//            	pstmt.execute();
+            	pstmt.executeUpdate();
+                try (ResultSet rs = pstmt.getGeneratedKeys()) {
+                    if (rs.next()) {
+//                    	System.out.println("----------------------");
+                    	for(int i=0;i<records.length;i++){
+                    		records[i] = rs.getString(i+1);
+//                    		System.out.println("parameter["+i+"] : "+records[i]);
+                    	}
+//                    	System.out.println("----------------------");
+                    	Utils.sendMail("saravanan.p@bahwancybertek.com","Ticket "+defectId+" has been Updated "+updatedColumns+"", records,"");
+                    }
+                    rs.close();
+                }
                 System.out.println("Defect Updated");
             } catch (Exception e) {
                 e.printStackTrace();

@@ -119,6 +119,8 @@ Ext.define('app.view.defects.DefectGrid',{
 			            cellclick: function (view, cell, cellIndex, items, row, rowIndex, e) {
 //			            	console.log(view, cell, cellIndex, items, row, rowIndex, e)
 			            	if(cellIndex == view.getGridColumns().length-1){
+			            		beforeEditValues.status = items.get('status')
+				        		beforeEditValues.deliver_dt = (items.get('deliver_dt') != null) ? new Date(items.get('deliver_dt')).getTime()/1000 : "";
 			                	console.log(items);
 			                	app.util.Utilities.gridRowId = items.internalId;
 			                    app.util.Utilities.gridRowIdx = rowIndex;
@@ -202,6 +204,11 @@ Ext.define('app.view.defects.DefectGrid',{
 //			                }
 			            },
 			            beforeedit : function(editor,e){
+			            	beforeEditValues.status = e.record.get('status')
+			        		beforeEditValues.deliver_dt = (e.record.get('deliver_dt') != null) ? new Date(e.record.get('deliver_dt')).getTime()/1000 : null;
+			        		beforeEditValues.assigned_to = e.record.get('assigned_to')
+			        		beforeEditValues.priority = e.record.get('priority')
+			        		beforeEditValues.category = e.record.get('category')
 			            	if (e.record.get('status') == 'CLOSED')
 			            	    return false;
 			            },
