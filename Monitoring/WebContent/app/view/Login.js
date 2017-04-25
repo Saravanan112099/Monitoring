@@ -21,14 +21,14 @@ Ext.define("app.view.Login", {
     {
      fieldLabel: 'User Name:',
      name: 'username',
-     value : 'Saravanan',
+//     value : 'Saravanan',
      allowBlank: false
     },
     {
      fieldLabel: 'Password:',
      name: 'password',
      inputType: 'password',
-     value : '2486',
+//     value : '2486',
      allowBlank: false
     },
    ],

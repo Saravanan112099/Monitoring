@@ -52,10 +52,13 @@ public class Utils {
 		return strPropValue;
 	}
 	public static void sendMail(String to,String subject,String[] parameter,String comments) throws AddressException, MessagingException{
-		final String username = "sp112099";
-		final String password = "Bmail@156";
+		final String username = getPropertyValues("fromId");
+		final String password = getPropertyValues("fromPass");
+		System.out.println("From User Id : "+username);
+		System.out.println("From Password : "+password);
+		System.out.println("To Addres : "+to);
 		Properties props = new Properties();
-		props.put("mail.smtp.auth", "true");
+		props.put("mail.smtp.auth", "false");
 		props.put("mail.smtp.host", "mail.bahwancybertek.com");
 		props.put("mail.smtp.port", "587");
 		String commentsCont = "";
@@ -161,7 +164,7 @@ public class Utils {
 //		message.setText(content);
 		message.setContent(htmlContent, "text/html");
 
-		Transport.send(message);
+//		Transport.send(message);
 
 		System.out.println("Email has been Sent");
 	}

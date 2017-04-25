@@ -810,7 +810,7 @@ Ext.define('app.view.defects.DefectGrid',{
 							text : 'Deliver Date',
 							tooltip : 'Deliver Date',
 							dataIndex : 'deliver_dt',
-							dateFormat: 'Y-m-d H:i:s T',
+							dateFormat: 'Y-m-d',
 							flex : 1,
 							editor: {
 				                xtype: 'datefield',
@@ -818,7 +818,7 @@ Ext.define('app.view.defects.DefectGrid',{
 				                editable: false,
 				                selectOnFocus: true,
 				                forceSelection: true,
-				                format: 'Y-m-d H:i:s T',
+				                format: 'Y-m-d',
 //				                minValue: '01/01/2006',
 //				                minText: 'Cannot have a start date before the company existed!',
 //				                maxValue: Ext.Date.format(new Date(), 'm/d/Y')
@@ -833,7 +833,7 @@ Ext.define('app.view.defects.DefectGrid',{
 							filter: {
 			                    type: 'date',
 			                    dataIndex: 'deliver_dt',
-			                    dateFormat: 'Y-m-d H:i:s T',
+			                    dateFormat: 'Y-m-d',
 			                    pickerDefaults: {
 			                        // any DatePicker configs
 			                    }
@@ -845,12 +845,12 @@ Ext.define('app.view.defects.DefectGrid',{
 									value = value.toString();
 									if(!isNaN(value)){
 										var d = new Date(parseInt(value * 1000));
-										var dt = Ext.util.Format.date(d, 'Y-m-d H:i:s T');
+										var dt = Ext.util.Format.date(d, 'Y-m-d');
 										return dt;
 									}else{
 										var d = new Date(value);
 										if(!isNaN(d.getTime())){
-											return Ext.util.Format.date(value, 'Y-m-d H:i:s T')
+											return Ext.util.Format.date(value, 'Y-m-d')
 										}else{
 											return value;
 										}

@@ -278,7 +278,7 @@ public class QueryExecuter {
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
             String sql_insert_defect = "INSERT INTO ms_defect(user_id,user_nm,tenant_id,tenant_nm,module,component,subject,description)"
 //                    + "values ((SELECT user_id from ms_user WHERE user_name = ?),"
-            		+ "values (1,"
+            		+ "values (59,"
                     + "?,"
 //                    + "(SELECT tenant_id from ms_user WHERE user_name = ?),"
 					+ "(select tenant_id from ms_tenant where tenant_nm = ?),"
@@ -309,7 +309,7 @@ public class QueryExecuter {
 //                		System.out.println(records[i]);
                 	}
 //                	System.out.println("----------------------");
-                	Utils.sendMail("saravanan.p@bahwancybertek.com",""+records[5]+" - New Ticket Added by "+records[4]+"", records,"");
+                	Utils.sendMail(Utils.getPropertyValues("to"),""+records[5]+" - New Ticket Added by "+records[4]+"", records,"");
 //                	Utils.sendMail("kotteeswaran.m@bahwancybertek.com","New Ticket Added", records);
                     recordId = rs.getString(1);
 //                    System.out.println("Ticket Id :  "+recordId);
@@ -534,7 +534,7 @@ public class QueryExecuter {
 //                        System.out.println(rs.getString(i+1));
 //                            dbOut = rs.getObject(1).toString();
                         }
-                    	Utils.sendMail("saravanan.p@bahwancybertek.com","Commets Added to the Ticket "+defectId+"", records,comments);
+                    	Utils.sendMail(Utils.getPropertyValues("to"),"Commets Added to the Ticket "+defectId+"", records,comments);
                     }                    
 //                    System.out.println("-------------------------------");
                     rs.close();
@@ -652,7 +652,7 @@ public class QueryExecuter {
 //                    		System.out.println("parameter["+i+"] : "+records[i]);
                     	}
 //                    	System.out.println("----------------------");
-                    	Utils.sendMail("saravanan.p@bahwancybertek.com","Ticket "+defectId+" has been Updated "+updatedColumns+"", records,"");
+                    	Utils.sendMail(Utils.getPropertyValues("to"),"Ticket "+defectId+" has been Updated "+updatedColumns+"", records,"");
                     }
                     rs.close();
                 }

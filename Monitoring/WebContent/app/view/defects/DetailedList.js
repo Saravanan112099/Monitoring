@@ -200,7 +200,7 @@ Ext.define('app.view.defects.DetailedList',{
 		            	 	 fieldCls: 'medtext',
 //		                     value: '-',
 //		                     minValue : new Date(),
-		                     format: "Y-m-d H:i:s T",
+		                     format: "Y-m-d",
 		                     listeners: {
 		                    	 select:{ 
 		                             fn: function (thiZ,newValue) {
